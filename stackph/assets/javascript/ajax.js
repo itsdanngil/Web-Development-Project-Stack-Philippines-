@@ -8,7 +8,6 @@ function LogoutUser() {
     xhr.onreadystatechange = function() {
         if(xhr.readyState == 4 && xhr.status == 200) {
             var result = xhr.responseText;
-            console.log(result);
             var json = JSON.parse(result);
             var location = json.redirect;
             window.location.href = location;
