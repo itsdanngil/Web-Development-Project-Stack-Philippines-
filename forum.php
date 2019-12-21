@@ -16,8 +16,11 @@
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	</head>
 <body>
-<div id="hd"><button class="openbtn" onclick="openNav()">☰ </button> StackPh<form> <input type="search" name="search" id="sr" placeholder="Search" /></form>
-</div>
+	<div id="hd"><button class="openbtn" onclick="openNav()">☰ </button>StackPh
+		<form>
+			<input type="search" name="search" id="sr" placeholder="Search" />
+		</form>
+	</div>
 <header class="hr1">
 	<a href="index.php">Home</a>
 	<?php if (!isset($_SESSION['user_id'])) { ?>
@@ -54,9 +57,11 @@
 	<?php echo message(); ?>
 	</div>
 	<p id="p6">Top Questions
-		<button class="button" id="ask-btn">
-			Ask Questions
-		</button>
+		<?php if(isset($_SESSION['user_id'])) { ?>
+			<button class="button" id="ask-btn">
+				Ask Questions
+			</button>
+		<?php } ?>
 	</p>
 	<hr/>
 	<div id="txt1">Post Question<br/>
@@ -82,21 +87,22 @@
 		var FormArea = document.getElementById('txt1');
 		var formStatus = false;
 		function ToggleForm(formStatus) {
-			if (formStatus	== false) {
-				FormArea.style.display = "block";
-				this.formStatus = true;
-			}
-			else {
-				FormArea.style.display = "none";
-				this.formStatus = false;
-			}
+				if (formStatus	== false) {
+						FormArea.style.display = "block";
+						this.formStatus = true;
+				}
+				else {
+						FormArea.style.display = "none";
+						this.formStatus = false;
+				}
 		}
+
 		AskQuestionBtn.addEventListener('click', function(event) {
-			event.preventDefault();
-			ToggleForm(formStatus);
+				event.preventDefault();
+				ToggleForm(formStatus);
 		});
 	</script>
-<footer id="ft"><p>&copy; Stack Philippines 2019</p></footer>
+<footer id="ft"><p>&copy; Stack Philippines <?php echo date('Y'); ?></p></footer>
 </center>
 </body>
 </html>

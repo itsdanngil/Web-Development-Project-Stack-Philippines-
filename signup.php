@@ -84,7 +84,6 @@
             xhr.onreadystatechange = function() {
                 if(xhr.readyState == 4 && xhr.status == 200) {
                     var result = xhr.responseText;
-                    console.log(result);
                     var json = JSON.parse(result);
                     if (json.hasOwnProperty('errors')) {
                         var msgpane = document.getElementById('message-pane');
@@ -92,7 +91,7 @@
                     }
                     else {
                         var location = json.redirect;
-                        window.location.replace(location);
+                        window.location.href = location;
                     }
                 }
             }
@@ -104,7 +103,7 @@
             RegisterUser();
         });
     </script>
-<footer id="ft"><p>&copy; Stack Philippines 2019</p></footer>
+<footer id="ft"><p>&copy; Stack Philippines <?php echo date('Y'); ?></p></footer>
 </center>
 </body>
 </html>

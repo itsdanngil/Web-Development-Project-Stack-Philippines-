@@ -102,7 +102,7 @@
             LoginUser();
         });
     </script>
-<footer id="ft"><p>&copy; Stack Philippines 2019</p></footer>
+<footer id="ft"><p>&copy; Stack Philippines <?php echo date('Y'); ?></p></footer>
 </center>
 </body>
 </html>
