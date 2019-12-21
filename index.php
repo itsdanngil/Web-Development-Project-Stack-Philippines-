@@ -23,7 +23,7 @@
     <a href="index.php" class="active">Home</a>
     <?php if (!isset($_SESSION['user_id'])) { ?>
         <a href="login.php">Log in</a>
-        <a href="signup.php" class="active">Sign Up</a>
+        <a href="signup.php">Sign Up</a>
     <?php } ?>
     <a href="contact.php">Contact</a>
     <a href="forum.php">Forum</a>
