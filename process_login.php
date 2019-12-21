@@ -35,12 +35,12 @@
     }
     else {
         if(ajax()) {
-            $output['errors'] = "Wrong password";
+            $output['errors'] = "Wrong password.";
             echo json_encode($output);
             exit;
         }
         else {
-            $_SESSION['message'] = "Wrong password";
+            $_SESSION['message'] = "Wrong password.";
             redirect_to("login.php");
         }
     }
