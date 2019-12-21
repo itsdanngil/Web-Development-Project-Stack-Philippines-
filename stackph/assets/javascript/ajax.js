@@ -5,7 +5,7 @@ function LogoutUser() {
 
     xhr.open('GET', 'logout.php?auth=logout', true);
     xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
-    xhr.onreadystatechange = function() {
+    xhr.onreadystatechange = function () {
         if(xhr.readyState == 4 && xhr.status == 200) {
             var result = xhr.responseText;
             var json = JSON.parse(result);
