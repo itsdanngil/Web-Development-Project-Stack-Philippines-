@@ -82,18 +82,18 @@
 		var FormArea = document.getElementById('txt1');
 		var formStatus = false;
 		function ToggleForm(formStatus) {
-				if (formStatus	== false) {
-						FormArea.style.display = "block";
-						this.formStatus = true;
-				}
-				else {
-						FormArea.style.display = "none";
-						this.formStatus = false;
-				}
+			if (formStatus	== false) {
+				FormArea.style.display = "block";
+				this.formStatus = true;
+			}
+			else {
+				FormArea.style.display = "none";
+				this.formStatus = false;
+			}
 		}
 		AskQuestionBtn.addEventListener('click', function(event) {
-				event.preventDefault();
-				ToggleForm(formStatus);
+			event.preventDefault();
+			ToggleForm(formStatus);
 		});
 	</script>
 <footer id="ft"><p>&copy; Stack Philippines 2019</p></footer>
