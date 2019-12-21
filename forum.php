@@ -30,7 +30,7 @@
 	<a href="contact.php">Contact</a>
 	<a href="forum.php" class="active">Forum</a>
 	<?php if (isset($_SESSION['user_id'])) { ?>
-					<a href="logout.php" id="logout-btn" style="float: right;">Logout</a>
+		<a href="logout.php" id="logout-btn" style="float: right;">Logout</a>
 	<?php } ?>
 </header>
 <div id="sp" class="sp1">
